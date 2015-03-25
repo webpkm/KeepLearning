@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Title of the document</title>
+	<!--[if lt IE 9]>
+	  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+  	<script src="http://www.w3schools.com/jquery.js"></script>
+</head>
+<body>
+	<meter value="10" min="1" max="100" title="10% completed" id="meter"></meter><br><br>
+	<button name="start" id="start" onclick="increase();">Start</button>
+	<style>
+		meter
+		{
+		  border: 1px solid #CCC;
+		  width: 400px;
+		  border-radius: 3px;
+		}
+	</style>
+	<script>
+	function increase(){
+		var t = "";
+		if($("#meter").val()<100)
+		{		
+			$("#meter").val($("#meter").val()+1);
+		}
+		else
+		{
+			//clearTimeout(t);
+			alert("Done!");
+		}
+		t = setTimeout("increase()", 100);
+	}
+	</script>
+</body>
