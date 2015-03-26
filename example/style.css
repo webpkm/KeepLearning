@@ -23,6 +23,7 @@
   color: #FFF;
 }
 .nm{margin:0;}
+.p-md{padding:20px}
 .page-content {
 	margin-top:60px;
 }
@@ -53,6 +54,11 @@
 	font-size:10px;
 	color:#BBB;
 }	
+.user-pic{
+  height: 150px;
+  width: 150px;
+  margin-top: -20px;
+}
 .user-name {
   font-size: 22px;
   font-weight: bold;
@@ -84,10 +90,38 @@
 .follow {
 	margin-left: 30px;
 }
+.post.well{
+	padding:0;
+}
+.post .media{
+	padding:10px 20px;
+	margin-top:0;
+	border:3px solid transparent;
+}
+.post .media:hover{
+	border-top:3px solid #B9D5E8;
+	border-bottom:3px solid #B9D5E8;
+}
+
 .post .comment-count {
 	font-size:12px;
 }	
+.post a:hover {
+	 color: #337ab7;
+}
+.post a {
+	color:#000;
+}	
 .post h4 {
   font-size: 14px;
-  font-weight: bold;
+}
+.follow_button{
+	background-image: url("images/follow-button.png");
+	height: 35px;
+	width: 106px;
+	display: block;
+	margin: auto;
+}
+.follow_button:hover{
+	background-image:url("images/follow-button-hover.png");
 }
