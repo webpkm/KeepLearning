@@ -11,9 +11,11 @@
 }
 
 .navbar-default {
-  background-color: #3D2977;
+  background-color: #004CA3;
 }
-
+.navbar-nav .post-img{	
+	padding: 8px;
+}
 .navbar-default .navbar-nav>li>a {
 	color:#FFF;
 }
@@ -87,9 +89,6 @@
 .user-follow-list li {
 	clear:both;
 }
-.follow {
-	margin-left: 30px;
-}
 .post.well{
 	padding:0;
 }
@@ -124,4 +123,28 @@
 }
 .follow_button:hover{
 	background-image:url("images/follow-button-hover.png");
+}
+.follow_button:active{
+	background-image:url("images/following-pushed.png");
+}
+.post_button{
+	background-image: url("images/post-normal.png");
+	height: 35px;
+	width: 106px;
+	display: block;
+	margin: auto;
+	background-size:100%;
+	border-radius: 5px;
+	float:right;
+	margin-left: 10px;
+}
+.post_button:hover{
+	background-image:url("images/post-hover.png");
+}
+
+.text-count {
+  line-height: 36px;
+}
+.post-submit {
+  padding: 10px 0;
 }

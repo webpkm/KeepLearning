@@ -16,7 +16,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">Brand</a>
+	      <a class="" href="#"><img src="images/logo.png"></a>
 	    </div>
 	
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -32,7 +32,7 @@
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
 	        <li><a href="#">Login</a></li>
-	        <li><a href="#">Post</a></li>
+	        <li><a href="#" class="post-img"><img src="images/post.png"></a></li>
 	      </ul>
 	    </div>
 	  </div>
@@ -41,9 +41,7 @@
 		<div class="container profile">
 			<div class="col-md-2">
 				<img src="images/user1-large.png" class="user-pic">
-				<div class="text-center">
-					<a href="#" class="follow_button"></a>
-				</div>
+				<a href="#" class="follow_button"></a>
 			</div>
 			<div class="col-md-6">
 				<div class="user-profile">
@@ -86,12 +84,15 @@
 					<div class="p-md">
 						<h4 class="nm">Post About Someone</h4>
 						<textarea name="post" id="post" class="form-control" rows="6">Lorem ipsum dolor sit amet, consecteture adipising elit. Fusce eleifent libero a mauris porta tincidunt. Vivamus in vulputate</textarea>
-						<div class="text-right">140 Post</div>
+						<div class="text-right post-submit">
+							<span class="text-count">140</span> 
+							<a href="#" class="post_button"></a>
+						</div>
 					</div>
 					<div class="media">
 				      <div class="media-left">
 				        <a href="#">
-				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE0LjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==">
+				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="images/user1.png">
 				        </a>
 				      </div>
 				      <div class="media-body">
@@ -101,7 +102,7 @@
 						<span class="comment-count">1 comment</span>
 				      </div>
 				      <div class="media-right">
-				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE0LjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==">
+				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="images/smily.png">
 				          <div class="text-center">22</div>
 				      </div>
 				    </div>
@@ -109,7 +110,7 @@
 					<div class="media">
 				      <div class="media-left">
 				        <a href="#">
-				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE0LjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==">
+				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="images/user.png">
 				        </a>
 				      </div>
 				      <div class="media-body">
@@ -119,7 +120,7 @@
 				        <span class="comment-count">1 comment</span>
 				      </div>
 				      <div class="media-right">
-				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE0LjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==">
+				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="images/smily.png">
 				          <div class="text-center">10</div>
 				      </div>
 				    </div>
@@ -127,7 +128,7 @@
 					<div class="media">
 				      <div class="media-left">
 				        <a href="#">
-				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE0LjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==">
+				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="images/user.png">
 				        </a>
 				      </div>
 				      <div class="media-body">
@@ -137,7 +138,7 @@
 				        <span class="comment-count">1 comment</span>
 				      </div>
 				      <div class="media-right">
-				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE0LjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==">
+				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="images/smily.png">
 				          <div class="text-center">8</div>
 				      </div>
 				    </div>
@@ -153,9 +154,9 @@
 								<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 							</div>
 							<div>
-								<div class="pull-right">&times;</div>
+								<div class="close">&times;</div>
 								Vlad Kachur@Vlad<br>
-								<span class="follow">Follow</span>
+								<button class="btn btn-default btn-xs">Follow</button>
 							</div>
 						</li>
 						<li>
@@ -163,9 +164,9 @@
 								<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 							</div>
 							<div>
-								<div class="pull-right">&times;</div>
+								<div class="close">&times;</div>
 								Mohan Raj @Mohan<br>
-								<span class="follow">Follow</span>
+								<button class="btn btn-default btn-xs">Follow</button>
 							</div>
 						</li>
 						<li>
@@ -173,9 +174,9 @@
 								<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 							</div>
 							<div>
-								<div class="pull-right">&times;</div>
+								<div class="close">&times;</div>
 								Alex Smith @Alex<br>
-								<span class="follow">Follow</span>
+								<button class="btn btn-default btn-xs">Follow</button>
 							</div>
 						</li>
 					</div>
