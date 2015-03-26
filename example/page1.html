@@ -7,43 +7,176 @@
 		<link href="style.css" rel="stylesheet"/>
 	</head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group has-feedback">
-          <input type="search" name="search"" id="search" class="form-control search" placeholder="Search">
-          <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
-        </div>
-      </form>
-      <ul class="nav navbar-nav">
-        <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span> Notifications</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Post</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">Brand</a>
+	    </div>
+	
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <form class="navbar-form navbar-left" role="search">
+	        <div class="form-group has-feedback">
+	          <input type="search" name="search"" id="search" class="form-control search" placeholder="Search">
+	          <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+	        </div>
+	      </form>
+	      <ul class="nav navbar-nav">
+	        <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+	        <li><a href="#"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span> Notifications</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">Login</a></li>
+	        <li><a href="#">Post</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	<div class="page-content">
+		<div class="container profile">
+			<div class="col-md-2">
+				Follow
+			</div>
+			<div class="col-md-6">
+				<div class="user-profile">
+					<h1 class="user-name nm">Vlad Kachur @ Vlad...</h1>
+					<p class="message">
+						Loream ipsum dolor sit amet, consecteture adipiscing elit.
+						Suspendisse congue bolortis arcu, in mattis felis efficituret.
+						Suspending eget felis in tortor vulputate cursus. 
+						Aliquam elementum venenatis pellentesque. Aenean non mauis
+						pharetra, cursus, urna at, iaculis mi. ut lacus vitae, aliquet 
+						convallis arcu. Etiam pulvinar, dui sed urna.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="profile_features">
+					<ul class="list-unstyled">
+						<li>
+							121<br>
+							<small>MENTIONS</small>
+						</li>
+						<li>
+							80<br>
+							<small>FOLLOWERS</small>
+						</li>
+						<li>
+							<span class="glyphicon glyphicon-user" aria-hidden="true"></span><br>
+							<small><nobr>SHARE PROFILE</nobr></small>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="container">
-		<div class="content">
-			<div class="text-center">
-				<h2>List of all the pages</h2>
+	
+	<div class="content">
+		<div class="container">
+			<div class="col-md-8">
+				<div class="post well">
+					<h4 class="nm">Post About Someone</h4>
+					<textarea name="post" id="post" class="form-control" rows="6">Lorem ipsum dolor sit amet, consecteture adipising elit. Fusce eleifent libero a mauris porta tincidunt. Vivamus in vulputate</textarea>
+					<div class="text-right">140 Post</div>
+				
+					<div class="media">
+				      <div class="media-left">
+				        <a href="#">
+				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE0LjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==">
+				        </a>
+				      </div>
+				      <div class="media-body">
+				        <h4 class="media-heading" id="media-heading">Vlad kachur @Vlad Kachur - 15m<a class="anchorjs-link" href="#media-heading"><span class="anchorjs-icon"></span></a></h4>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend libero a mauris porta tincidunt. Vivamus in valputate
+						<br>
+						<span class="comment-count">1 comment</span>
+				      </div>
+				      <div class="media-right">
+				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE0LjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==">
+				          <div class="text-center">22</div>
+				      </div>
+				    </div>
+					
+					<div class="media">
+				      <div class="media-left">
+				        <a href="#">
+				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE0LjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==">
+				        </a>
+				      </div>
+				      <div class="media-body">
+				        <h4 class="media-heading" id="media-heading">Mohan Raj @Mohan - 20m<a class="anchorjs-link" href="#media-heading"><span class="anchorjs-icon"></span></a></h4>
+				        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fosce eleifent librero a mauris porta tincidunt. Vivamus in
+				        <br>
+				        <span class="comment-count">1 comment</span>
+				      </div>
+				      <div class="media-right">
+				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE0LjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==">
+				          <div class="text-center">10</div>
+				      </div>
+				    </div>
+					
+					<div class="media">
+				      <div class="media-left">
+				        <a href="#">
+				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE0LjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==">
+				        </a>
+				      </div>
+				      <div class="media-body">
+				        <h4 class="media-heading" id="media-heading">Alex Smith @Alex - 12m<a class="anchorjs-link" href="#media-heading"><span class="anchorjs-icon"></span></a></h4>
+				        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fosce eleifent librero a mauris porta tincidunt. Vivamus in
+						<br>
+				        <span class="comment-count">1 comment</span>
+				      </div>
+				      <div class="media-right">
+				          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE0LjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==">
+				          <div class="text-center">8</div>
+				      </div>
+				    </div>
+			    </div>
+    
+			</div>
+			<div class="col-md-4">
+				<div class="post well">
+					<h4 class="nm">Who to follow</h4>
+					<ul class="list-unstyled user-follow-list">
+						<li>
+							<div class="user-icon">
+								<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+							</div>
+							<div>
+								<div class="pull-right">&times;</div>
+								Vlad Kachur@Vlad<br>
+								<span class="follow">Follow</span>
+							</div>
+						</li>
+						<li>
+							<div class="user-icon">
+								<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+							</div>
+							<div>
+								<div class="pull-right">&times;</div>
+								Mohan Raj @Mohan<br>
+								<span class="follow">Follow</span>
+							</div>
+						</li>
+						<li>
+							<div class="user-icon">
+								<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+							</div>
+							<div>
+								<div class="pull-right">&times;</div>
+								Alex Smith @Alex<br>
+								<span class="follow">Follow</span>
+							</div>
+						</li>
+					</div>
+										
+				</div>
 			</div>
 		</div>
 	</div>

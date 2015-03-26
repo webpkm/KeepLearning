@@ -1,9 +1,9 @@
+.container {
+	max-width:1100px;
+}
 .content {
-	min-height:400px;
-	border:1px solid #ccc;
-	background-color:#DDD;
-	margin-top:40px;
-	border-radius:8px;
+	background-color:#B9D5E8;
+	padding:20px;	
 }
 
 .search {
@@ -19,5 +19,75 @@
 }
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-  color: #CCC;
+  text-shadow: 1px 1px 3px #FFF;
+  color: #FFF;
+}
+.nm{margin:0;}
+.page-content {
+	margin-top:60px;
+}
+.profile{
+	padding:30px 0;
+}
+.profile_features {
+	  border: 2px solid #F9D3F9;
+	  padding: 20px;
+	  border-radius: 5px;
+	  margin-top: 40px;
+	  display: table;
+}	
+.profile_features li {
+	  float: left;
+	  width: 33.33%;
+	  text-align: center;
+	  font-size: 16px;
+	  font-weight: bold;
+	  color: rgb(135, 135, 218);
+	  border-right: 1px solid;
+	  padding:0 10px;
+}
+.profile_features li:last-child {
+	border-right: none;
+}
+.profile_features li small{
+	font-size:10px;
+	color:#BBB;
+}	
+.user-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.user-profile {
+  margin-right: 50px;
+  border-right: 1px solid #ccc;
+}
+.user-icon
+{ 
+	height: 40px;
+	width: 40px;
+	display: inline-block;
+	font-size: 20px;
+	text-align: center;
+	background-color: #DDD;
+	padding-top: 6px;
+	float:left;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+.user-follow-list {
+	margin-top:10px;
+}
+.user-follow-list li {
+	clear:both;
+}
+.follow {
+	margin-left: 30px;
+}
+.post .comment-count {
+	font-size:12px;
+}	
+.post h4 {
+  font-size: 14px;
+  font-weight: bold;
 }
