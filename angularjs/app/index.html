@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="phonecatApp">
 <head>
   <meta charset="utf-8">
   <title>Google Phone Gallery</title>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="css/app.css">
-  <script src="bower_components/angular/angular.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/angular.min.js"></script>
+  <script src="js/apps.js"></script>
 </head>
-<body>
+<body ng-controller="phoneController">
+<div class="container">
+<div ng-init="search='nexus'"></div>
 
+  <form>
+  	Search: <input type="search" ng-model="search"><br><br>
+  </form>
   <ul>
-    <li>
-      <span>Nexus S</span>
+    <li ng-repeat="phone in phones|filter:search">
+      <span>{{phone.name}}</span>
       <p>
-        Fast just got faster with Nexus S.
-      </p>
-    </li>
-    <li>
-      <span>Motorola XOOM™ with Wi-Fi</span>
-      <p>
-        The Next, Next Generation tablet.
+        {{phone.description}}
       </p>
     </li>
   </ul>
-
+  <div class="well">{{phones}}</div>
+</div>
 </body>
 </html>
