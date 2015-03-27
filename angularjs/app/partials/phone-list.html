@@ -1,0 +1,30 @@
+<!-- <div ng-init="search='nexus'"></div> -->
+<h3>Google Phone Galley</h3>
+ <div class="row">
+ 	<div class="col-md-3">
+  <form>
+  	<label for="">Search:</label>
+  	<input type="search" ng-model="search" class="form-control"><br>
+  	<label for="">Sort by:</label>
+	<select ng-model="orderProp" class="form-control">
+	  <option value="name">Alphabetical</option>
+	  <option value="age">Newest</option>
+	</select>
+  </form>  		
+ 	</div>
+ 	<div class="col-md-9">
+    <div class="row">
+	  <div class="col-sm-6 col-md-4" ng-repeat="phone in phones | filter:search | orderBy:orderProp">
+	    <div class="thumbnail">
+	      <a href="#/phones/{{phone.id}}"><img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}"></a>
+	      <div class="caption">
+	        <a href="#/phones/{{phone.id}}"><h4>{{phone.name}}</h4></a>
+	        <p>{{phone.snippet}}</p>
+	        <a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Buy</a>
+			<a href="#/phones/{{phone.id}}" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-list-alt"></span> Details</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+ 	</div>
+ </div>

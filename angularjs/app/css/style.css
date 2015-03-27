@@ -9,3 +9,13 @@ body{
 	height:100px;
 	background-color:#FFF;
 }
+.thumbnail h4{
+	height:38px;
+}	
+.thumbnail p{
+	overflow: hidden;
+	height:80px;
+}	
+.thumbnail{
+	height:413px;
+}
