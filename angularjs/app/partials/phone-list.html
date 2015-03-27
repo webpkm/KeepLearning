@@ -4,7 +4,7 @@
  	<div class="col-md-3">
   <form>
   	<label for="">Search:</label>
-  	<input type="search" ng-model="search" class="form-control"><br>
+  	<input type="search" ng-model="search" id="search" class="form-control"><br>
   	<label for="">Sort by:</label>
 	<select ng-model="orderProp" class="form-control">
 	  <option value="name">Alphabetical</option>
@@ -15,7 +15,7 @@
  	</div>
  	<div class="col-md-9">
     <div class="row phones">
-	  <div class="col-sm-6 col-md-4 phone-listing" ng-repeat="phone in phones | filter:search | orderBy:orderProp">
+	  <div class="col-sm-6 col-md-4 phone-listing" ng-repeat="phone in filteredItems  = (phones | filter:search | orderBy:orderProp)">
 	    <div class="thumbnail">
 	      <a href="#/phones/{{phone.id}}.html"><img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}"></a>
 	      <div class="caption">
@@ -28,5 +28,9 @@
 	    </div>
 	  </div>
 	</div>
+	  <div class="alert alert-danger" role="alert" ng-hide="filteredItems.length">
+		<strong>Opps!</strong> No record matched.
+		<a ng-click="clearFilter()">Clear the filter</a>
+      </div>
  	</div>
  </div>

@@ -11,6 +11,9 @@ phonecatControllers.controller('PhoneListCtrl', function($scope, $http){
 	 $http.get('phones/phones.json').success(function(data) {
 	    $scope.phones = data;
 	  });
+	 $scope.clearFilter = function() {
+		 $scope.search = "";
+    };
     $scope.orderProp = 'age';
 });
 
@@ -26,8 +29,8 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$h
 	      $scope.mainImageUrl = data.images[0];
 	    });
 		$scope.setImage = function(imageUrl) {
-	      $scope.mainImageUrl = imageUrl;
-	    };
+			$scope.mainImageUrl = imageUrl;
+		};
 }]);
 phonecatApp.config(['$routeProvider',
 function($routeProvider) {
