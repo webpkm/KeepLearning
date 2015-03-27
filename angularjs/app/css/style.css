@@ -1,3 +1,25 @@
+body{
+	padding:20px;
+}
+.print{
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	height:100px;
+	background-color:#FFF;
+}
+.thumbnail h4{
+	height:38px;
+}	
+.thumbnail p{
+	overflow: hidden;
+	height:80px;
+}	
+.thumbnail{
+	height:470px;
+}
+
 /* app css stylesheet */
 
 body {
