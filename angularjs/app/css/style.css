@@ -77,7 +77,7 @@ ul.phone-thumbs {
 }
 
 ul.phone-thumbs li {
-  border: 1px solid black;
+  border: 2px solid black;
   display: inline-block;
   margin: 1em;
   background-color: white;
@@ -118,4 +118,10 @@ ul.specs dt {
 
 h1 {
   border-bottom: 1px solid gray;
+}
+.phone-thumbs li.active{	
+  border: 2px solid #CE31D8;
+}
+.phone-thumbs li{	
+  border: 2px solid transparent;
 }
