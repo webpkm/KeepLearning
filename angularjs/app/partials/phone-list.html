@@ -9,6 +9,7 @@
 	<select ng-model="orderProp" class="form-control">
 	  <option value="name">Alphabetical</option>
 	  <option value="age">Newest</option>
+	  <option value="price">Price</option>
 	</select>
   </form>  		
  	</div>
@@ -19,6 +20,7 @@
 	      <a href="#/phones/{{phone.id}}"><img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}"></a>
 	      <div class="caption">
 	        <a href="#/phones/{{phone.id}}"><h4>{{phone.name}}</h4></a>
+	        Price: <b>{{phone.price | currency}}</b>
 	        <p>{{phone.snippet}}</p>
 	        <a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Buy</a>
 			<a href="#/phones/{{phone.id}}" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-list-alt"></span> Details</a>
