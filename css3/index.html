@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="http://www.w3schools.com/jquery.js"></script>
+	<link rel="stylesheet" href="style.css">
+	</head>
+<body>
+<div class="container">
+	<div class="control pull-right">
+		<button type="button" id="increase">+</button>
+		<button type="button" id="decrease">-</button>
+		<button type="button" id="restore">Restore</button>
+	</div>
+	<h1>This is the heading 1</h1>
+	<h2>This is the heading 2</h2>
+	<h3>This is the heading 3</h3>
+	<h4>This is the heading 4</h4>
+	<h5>This is the heading 5</h5>
+	<h6>This is the heading 6</h6>
+	
+	This is the default size. This is the default size. This is the default size.
+	
+	<p>
+	This is the default size. This is the default size. This is the default size.
+	</p>
+	
+	<small>This this is the small text</small>
+</div>
+</body>
+</html>
+<script>
+var DEFAULT_FONT_SIZE = 14;
+$(document).ready(function(){
+		
+	$(".control button").click(function(){
+		var t = $(this);
+		var font_size = parseInt($("body").css("font-size"));
+		if (t.attr("id") == "increase") {
+			font_size++;
+		}
+		else if (t.attr("id") == "restore") {
+			font_size = DEFAULT_FONT_SIZE;
+		}
+		else {
+			font_size--
+		}
+		setFontSize(font_size);
+	});
+});
+function setFontSize($size){
+	$("body").css("font-size", $size+"px");
+}
+</script>
