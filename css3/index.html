@@ -58,6 +58,7 @@
 (function ($) {
     $.fn.fontSizeAdustable = function( options ) {
         var settings = $.extend({
+        	useCookie: true,
         	defaultFontSize: 14,
         	cookieName: "DEFAULT_FONT_SIZE",
         	restoreButton: true,
@@ -68,6 +69,7 @@
         	buttonsIcons:true,
         	buttonText:true,
         }, options );
+        
  		var controls = function (settings){
  			return '<div class="fontSizeAdustableControl pull-right">\
 	 			<button type="button" id="increase">+</button>\
@@ -102,7 +104,7 @@
  		
  		var setFontSize = function (font_size){
  			$("body").css("font-size", font_size+"px");
- 			cookieSetFontSize(font_size);
+ 			settings.useCookie?cookieSetFontSize(font_size):"";
  		}
  		var cookieSetFontSize = function(font_size){
  			if(font_size == settings.cookieName) {
@@ -111,6 +113,14 @@
  			$.cookie(settings.cookieName, font_size, { path: '/', expires: 7 });
  		}
         $(this).prepend(controls);
+        
+        if(settings.useCookie) {
+	        (function (settings) {
+	        	if($.cookie(settings.cookieName) !== "undefined"){
+		    		setFontSize($.cookie(settings.cookieName));
+		    	}
+	        })(settings);
+        }
         return this;
     };
 }( jQuery ));
