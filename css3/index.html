@@ -8,11 +8,6 @@
 	</head>
 <body>
 <div class="container">
-	<div class="control pull-right">
-		<button type="button" id="increase">+</button>
-		<button type="button" id="decrease">-</button>
-		<button type="button" id="restore">Restore</button>
-	</div>
 	<h1>This is the heading 1</h1>
 	<h2>This is the heading 2</h2>
 	<h3>This is the heading 3</h3>
@@ -74,55 +69,52 @@
         	buttonText:true,
         }, options );
  		var controls = function (settings){
- 			return '<div class="control pull-right">\
+ 			return '<div class="fontSizeAdustableControl pull-right">\
 	 			<button type="button" id="increase">+</button>\
 	 			<button type="button" id="decrease">-</button>\
 	 			<button type="button" id="restore">Restore</button>\
 	 		</div>';	
+ 		};
+ 		
+ 		$(document).on("click", ".fontSizeAdustableControl button", function(){
+ 			var t = $(this);
+ 			var font_size = parseInt($("body").css("font-size"));
+ 			if (t.attr("id") == "increase") {
+ 				font_size++;
+ 			}
+ 			else if (t.attr("id") == "restore") {
+ 				if(settings.restoreConfirm) {
+	 				if(font_size == settings.defaultFontSize) {
+	 					alert(settings.alreadyRestoreMessage);
+	 					return;
+	 				}
+ 				}
+ 				var confirm = window.confirm(settings.restoreConfirmMessage);
+ 				if(confirm) {
+ 					font_size = settings.defaultFontSize;
+ 				}
+ 			}
+ 			else {
+ 				font_size--
+ 			}
+ 			setFontSize(font_size);
+ 		});
+ 		
+ 		var setFontSize = function (font_size){
+ 			$("body").css("font-size", font_size+"px");
+ 			cookieSetFontSize(font_size);
  		}
-        $(this).append(controls);
+ 		var cookieSetFontSize = function(font_size){
+ 			if(font_size == settings.cookieName) {
+ 				$.removeCookie(settings.cookieName);
+ 			}
+ 			$.cookie(settings.cookieName, font_size, { path: '/', expires: 7 });
+ 		}
+        $(this).prepend(controls);
         return this;
     };
 }( jQuery ));
 
-$("body").fontSizeAdustable();
+$(".container").fontSizeAdustable();
 
-var DEFAULT_FONT_SIZE = 14;
-var cookieName = 'DEFAULT_FONT_SIZE';
-$(document).ready(function(){
-	if($.cookie(cookieName) !== "undefined"){
-		setFontSize($.cookie(cookieName));
-	}
-	$(".control button").click(function(){
-		var t = $(this);
-		var font_size = parseInt($("body").css("font-size"));
-		if (t.attr("id") == "increase") {
-			font_size++;
-		}
-		else if (t.attr("id") == "restore") {
-			if(font_size == DEFAULT_FONT_SIZE) {
-				alert("Already on default setting");
-				return;
-			}
-			var confirm = window.confirm("Are you sure to restore the font settings (Yes/No)");
-			if(confirm) {
-				font_size = DEFAULT_FONT_SIZE;
-			}
-		}
-		else {
-			font_size--
-		}
-		setFontSize(font_size);
-	});
-});
-function setFontSize(font_size){
-	$("body").css("font-size", font_size+"px");
-	cookieSetFontSize(font_size);
-}
-function cookieSetFontSize(font_size){
-	if(font_size == cookieName) {
-		$.removeCookie(cookieName);
-	}
-	$.cookie(cookieName, font_size, { path: '/', expires: 7 });
-}
 </script>
