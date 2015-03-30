@@ -1,3 +1,6 @@
+if (typeof jQuery === 'undefined') {
+  throw new Error('FontSizeAdjustable\'s requires jQuery')
+}
 (function ($) {
     $.fn.fontSizeAdustable = function( options ) {
         var settings = $.extend({
@@ -13,9 +16,15 @@
         	buttonText:true
         }, options );
         
+        if(settings.useCookie){
+        	if (typeof jQuery.cookie === 'undefined') {
+        		throw new Error('FontSizeAdjustable\'s requires jQuery cookie')
+        	}
+        }
+
+        
  		var controls = function (settings){
  			var restoreButton = '<button type="button" id="restore">Restore</button>';
- 			console.log(settings);
  			return '<div class="fontSizeAdustableControl pull-right"><button type="button" id="increase">+</button><button type="button" id="decrease">-</button>'+(settings.restoreButton?restoreButton:"")+'</div>';	
  		};
  		
