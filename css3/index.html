@@ -73,21 +73,19 @@
         	buttonsIcons:true,
         	buttonText:true,
         }, options );
- 
-        // Greenify the collection based on the settings variable.
-        return this.css({
-            color: settings.color,
-            backgroundColor: settings.backgroundColor
-        });
+ 		var controls = function (settings){
+ 			return '<div class="control pull-right">\
+	 			<button type="button" id="increase">+</button>\
+	 			<button type="button" id="decrease">-</button>\
+	 			<button type="button" id="restore">Restore</button>\
+	 		</div>';	
+ 		}
+        $(this).append(controls);
+        return this;
     };
 }( jQuery ));
 
-// Usage example:
-$( "a" ).showLinkLocation();
-
-$( "body" ).greenify({
-    color: "orange"
-});
+$("body").fontSizeAdustable();
 
 var DEFAULT_FONT_SIZE = 14;
 var cookieName = 'DEFAULT_FONT_SIZE';
