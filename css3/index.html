@@ -39,7 +39,14 @@ $(document).ready(function(){
 			font_size++;
 		}
 		else if (t.attr("id") == "restore") {
-			font_size = DEFAULT_FONT_SIZE;
+			if(font_size == DEFAULT_FONT_SIZE) {
+				alert("Already on default setting");
+				return;
+			}
+			var confirm = window.confirm("Are you sure to restore the font settings (Yes/No)");
+			if(confirm) {
+				font_size = DEFAULT_FONT_SIZE;
+			}
 		}
 		else {
 			font_size--
