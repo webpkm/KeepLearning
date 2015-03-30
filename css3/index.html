@@ -102,19 +102,26 @@
  			setFontSize(font_size);
  		});
  		
+ 		// set the font size and apply it for the body 
  		var setFontSize = function (font_size){
  			$("body").css("font-size", font_size+"px");
  			settings.useCookie?cookieSetFontSize(font_size):"";
  		}
+ 		
+ 		// store the current font size in cookie
  		var cookieSetFontSize = function(font_size){
  			if(font_size == settings.cookieName) {
  				$.removeCookie(settings.cookieName);
  			}
  			$.cookie(settings.cookieName, font_size, { path: '/', expires: 7 });
  		}
+ 		
+ 		// append the controlls for increase, decrease and restore
         $(this).prepend(controls);
         
         if(settings.useCookie) {
+        	
+        	// self invoking function to apply the cookie font size value
 	        (function (settings) {
 	        	if($.cookie(settings.cookieName) !== "undefined"){
 		    		setFontSize($.cookie(settings.cookieName));
