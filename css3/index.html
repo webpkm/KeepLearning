@@ -60,6 +60,28 @@
     };
 }( jQuery ));
  
+(function ($) {
+    $.fn.fontSizeAdustable = function( options ) {
+        var settings = $.extend({
+        	defaultFontSize: 14,
+        	cookieName: "DEFAULT_FONT_SIZE",
+        	restoreButton: true,
+        	restoreConfirm: true,
+        	restoreConfirmMessage: "Are you sure to restore the font settings (Yes/No)",
+        	alreadyRestoreMessage: "Already on default setting!",
+        	incraseFontSizeStep:1,
+        	buttonsIcons:true,
+        	buttonText:true,
+        }, options );
+ 
+        // Greenify the collection based on the settings variable.
+        return this.css({
+            color: settings.color,
+            backgroundColor: settings.backgroundColor
+        });
+    };
+}( jQuery ));
+
 // Usage example:
 $( "a" ).showLinkLocation();
 
