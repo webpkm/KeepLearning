@@ -14,11 +14,9 @@
         }, options );
         
  		var controls = function (settings){
- 			return '<div class="fontSizeAdustableControl pull-right">\
-	 			<button type="button" id="increase">+</button>\
-	 			<button type="button" id="decrease">-</button>\
-	 			<button type="button" id="restore">Restore</button>\
-	 		</div>';	
+ 			var restoreButton = '<button type="button" id="restore">Restore</button>';
+ 			console.log(settings);
+ 			return '<div class="fontSizeAdustableControl pull-right"><button type="button" id="increase">+</button><button type="button" id="decrease">-</button>'+(settings.restoreButton?restoreButton:"")+'</div>';	
  		};
  		
  		$(document).on("click", ".fontSizeAdustableControl button", function(){
@@ -60,7 +58,7 @@
  		}
  		
  		// append the controlls for increase, decrease and restore
-        $(this).prepend(controls);
+        $(this).prepend(controls(settings));
         
         if(settings.useCookie) {
         	
