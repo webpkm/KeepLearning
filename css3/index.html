@@ -91,7 +91,7 @@
 	 					return;
 	 				}
  				}
- 				var confirm = window.confirm(settings.restoreConfirmMessage);
+ 				var confirm = settings.restoreConfirm ? window.confirm(settings.restoreConfirmMessage) : true;
  				if(confirm) {
  					font_size = settings.defaultFontSize;
  				}
