@@ -1,0 +1,50 @@
+<script>
+function User (theName, theEmail) {
+    this.name = theName;
+    this.email = theEmail;
+    this.quizScores = [];
+    this.currentScore = 0;
+}
+User.prototype = {
+    constructor: User,
+    saveScore:function (theScoreToAdd)  {
+        this.quizScores.push(theScoreToAdd)
+    },
+    showNameAndScores:function ()  {
+        var scores = this.quizScores.length > 0 ? this.quizScores.join(",") : "No Scores Yet";
+        return this.name + " Scores: " + scores;
+    },
+    changeEmail:function (newEmail)  {
+        this.email = newEmail;
+        return "New Email Saved: " + this.email;
+    },
+    print:function(){
+    	var scores = this.quizScores.length > 0 ? this.quizScores.join(",") : "No Scores Yet";
+        return "Details<hr> <b>Name:</b>" + this.name + " <br><b>Email:</b>" + this.email + " <br><b>Scores:</b> " + scores;
+    }
+}
+var prem = new User('Prem', "premkumarmaurya1@gmail.com");
+print(prem.name);
+print(prem.email);
+print(prem.showNameAndScores());
+print(prem.changeEmail("premkumar.iics@gmail.com"));
+print(prem.print());
+
+
+function print($str){
+	document.write("<hr>");
+	if($str instanceof Object) // To check is the variable is an object
+	{
+		var output = '';
+		for (var property in $str) { // make the loop based on the object property
+		  output += property + ': ' + $str[property]+'; <br>';
+		}
+		document.write(output);
+	}
+	else
+	{
+		document.write($str);
+	}
+	document.write("<br>");
+}
+</script>
