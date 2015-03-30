@@ -7,19 +7,19 @@ Employee.prototype.startDate = new Date();
 Employee.prototype.signedNDA = true;
 
 Employee.prototype.fullName = function () {
-	print(this); 
-	print(this.firstName + " " + this.lastName); 
+	return this.firstName + " " + this.lastName; 
 };
 var abhijit = new Employee ();
 print(abhijit.fullName());
 print(abhijit.signedNDA);
+print(abhijit);
 
 function print($str){
 	document.write("<hr>");
-	if($str instanceof Object)
+	if($str instanceof Object) // To check is the variable is an object
 	{
 		var output = '';
-		for (var property in $str) {
+		for (var property in $str) { // make the loop based on the object property
 		  output += property + ': ' + $str[property]+'; <br>';
 		}
 		document.write(output);
