@@ -6,7 +6,7 @@ if (typeof jQuery === 'undefined') {
         var settings = $.extend({
         	useCookie: true,
         	defaultFontSize: 14,
-        	cookieName: "DEFAULT_FONT_SIZE",
+        	cookieName: "FONT_SIZE",
         	restoreButton: true,
         	restoreConfirm: true,
         	restoreConfirmMessage: "Are you sure to restore the font settings (Yes/No)",
