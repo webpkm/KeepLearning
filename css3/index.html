@@ -2,6 +2,8 @@
 <html>
 	<head>
 	<script src="http://www.w3schools.com/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+	
 	<link rel="stylesheet" href="style.css">
 	</head>
 <body>
@@ -30,8 +32,11 @@
 </html>
 <script>
 var DEFAULT_FONT_SIZE = 14;
+var cookieName = 'DEFAULT_FONT_SIZE';
 $(document).ready(function(){
-		
+	if($.cookie(cookieName) !== "undefined"){
+		setFontSize($.cookie(cookieName));
+	}
 	$(".control button").click(function(){
 		var t = $(this);
 		var font_size = parseInt($("body").css("font-size"));
@@ -54,7 +59,13 @@ $(document).ready(function(){
 		setFontSize(font_size);
 	});
 });
-function setFontSize($size){
-	$("body").css("font-size", $size+"px");
+function setFontSize(font_size){
+	$("body").css("font-size", font_size+"px");
+}
+function cookieSetFontSize(font_size){
+	if(font_size == cookieName) {
+		$.removeCookie(cookieName);
+	}
+	$.cookie(cookieName, font_size, { path: '/', expires: 7 });
 }
 </script>
