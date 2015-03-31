@@ -12,9 +12,15 @@
 <body>
 	<div class="container" ng-controller="ListTodosCtrl">
 		<h3>My todos list</h3>
-		<div class="todo" ng-repeat="todo in todos">
-			{{$index+1}}. {{todo.snippet}}
-		</div>
+		<ol>
+			<li class="todo" ng-repeat="todo in todos" ng-class="{done: todo.status==1}">
+				{{todo.snippet}}
+				<br>
+				<button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-ok"></span> Done</button>
+				<button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span> Remove</button>
+
+			</li>
+		</ol>
 		
 	</div>
 	<div class="container hide" ng-controller="userController">

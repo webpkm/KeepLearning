@@ -3,3 +3,11 @@ body {
   	background-color: #120E0E;
   	color: #C1F91D;;
 }
+.todo.done {
+	text-decoration: line-through;
+  	color: #CCC;
+}
+
+.todo {
+	margin:10px 20px;
+}
