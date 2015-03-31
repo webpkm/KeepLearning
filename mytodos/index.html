@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mytodos">
+<head>
+  <meta charset="utf-8">
+  <title>My todos app</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+  <script src="js/apps.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container" ng-controller="ListTodosCtrl">
+		<h3>My todos list</h3>
+		<div class="todo" ng-repeat="todo in todos">
+			{{$index+1}}. {{todo.snippet}}
+		</div>
+		
+	</div>
+	<div class="container hide" ng-controller="userController">
+		Hi {{user.first_name}}, <br>
+		Welcome in angularjs coding.
+	</div>
+</body>
+</html>
