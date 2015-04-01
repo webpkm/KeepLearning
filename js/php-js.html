@@ -6,6 +6,9 @@ $result = explode(" ", $string);
 $result = implode("|",$result);
 
 
+$result = range(0, 12);
+
+
 print_r($result);
 
 
@@ -18,6 +21,12 @@ print_r($result);
 	
 	function explode(delimeter, string) {
 		return string.split(delimeter);
+	}
+	
+	function range(start, end) {
+		var numbers = [];
+		for(var i=start; numbers.push(i++)<=end;);
+		return numbers;
 	}
 	
 	function print_r(string) {
