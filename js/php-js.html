@@ -13,6 +13,8 @@ $result = round(1.95583, 2);
 $a = new Array("red","green","red");
 $result = array_unique($a);
 
+$result = trim(" PREM KUMAR   ");
+
 print_r($result);
 
 
@@ -51,6 +53,10 @@ print_r($result);
 	    for (var k in temp)
 	        r.push(k);
 	    return r;
+	}
+	
+	function trim(value) {
+		return value.trim();
 	}
 	
 	function print_r(string) {
