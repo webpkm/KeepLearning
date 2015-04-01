@@ -11,5 +11,8 @@ shuffle($result);
 
 $result = round(1.95583, 2);
 
+$a = array("a"=>"red","b"=>"green","c"=>"red");
+$result = array_unique($a);
+
 print_r($result);
 ?>

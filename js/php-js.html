@@ -10,6 +10,9 @@ $result = range(0, 12);
 $result = shuffle($result); // how can we write code to call by the reference like php is doing
 $result = round(1.95583, 2);
 
+$a = new Array("red","green","red");
+$result = array_unique($a);
+
 print_r($result);
 
 
@@ -37,6 +40,17 @@ print_r($result);
 	
 	function round(value, precision) {
 		return value.toFixed(precision);
+	}
+	
+	function array_unique(arr) {
+		var temp = {};
+	    for (var i = 0; i < arr.length; i++)
+	        temp[arr[i]] = true;
+	 
+	    var r = [];
+	    for (var k in temp)
+	        r.push(k);
+	    return r;
 	}
 	
 	function print_r(string) {
