@@ -1,0 +1,21 @@
+<script>
+function fnFooBar(strVal) {
+
+	alert(strVal);
+
+	return 1;
+}
+// By using the eval function to evaluate the string as run javascript
+var strFun = "fnFooBar";
+var strParam = "this is the parameter";
+var funcCall = strFun + "('" + strParam + "');";
+var ret = eval(funcCall);
+
+
+// by using the window object and this is the best good example
+var  strFun= "fnFooBar";
+var strParam = "this is the parameter";
+var fn = window[strFun];
+fn(strParam);
+
+</script>
