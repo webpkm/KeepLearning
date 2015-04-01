@@ -1,0 +1,28 @@
+<script>
+
+var $string ="This is the example";
+$result = explode(" ", $string);
+
+$result = implode("|",$result);
+
+
+print_r($result);
+
+
+
+//function PHP_JS{
+	
+	function implode(delimeter, array) {
+		return array.join(delimeter);
+	}
+	
+	function explode(delimeter, string) {
+		return string.split(delimeter);
+	}
+	
+	function print_r(string) {
+		document.write(string);
+		console.log(string);
+	}
+//}
+</script>
