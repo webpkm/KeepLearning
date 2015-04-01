@@ -8,7 +8,7 @@ $result = implode("|",$result);
 
 $result = range(0, 12);
 $result = shuffle($result); // how can we write code to call by the reference like php is doing
-
+$result = round(1.95583, 2);
 
 print_r($result);
 
@@ -33,6 +33,10 @@ print_r($result);
 	function shuffle(array) {
 		for(var j, x, i = array.length; i; j = parseInt(Math.random() * i), x = array[--i], array[i] = array[j], array[j] = x);
 		return array;
+	}
+	
+	function round(value, precision) {
+		return value.toFixed(precision);
 	}
 	
 	function print_r(string) {

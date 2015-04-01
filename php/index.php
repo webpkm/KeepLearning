@@ -9,5 +9,7 @@ $result = range(0, 12);
 
 shuffle($result);
 
+$result = round(1.95583, 2);
+
 print_r($result);
 ?>
