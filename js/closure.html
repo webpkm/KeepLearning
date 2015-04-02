@@ -1,5 +1,14 @@
 <script src="php_javascript.js"></script>
 <script>
+// without closure
+for (var i=0; i<4; i++)
+{
+	setTimeout(function(){
+	    print_r(num);
+	}, 1000);
+}
+
+// it good by using closure
 for (var i=0; i<4; i++)
 {
     (function(num){
