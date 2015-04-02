@@ -4,7 +4,7 @@
 for (var i=0; i<4; i++)
 {
 	setTimeout(function(){
-	    print_r(num);
+	    print_r(i);
 	}, 1000);
 }
 
@@ -17,4 +17,16 @@ for (var i=0; i<4; i++)
         }, 1000);
     })(i);
 }
+
+// object is always call by the referent so when change the value then it will chanage
+var obj = { age:17};
+print_r(obj);
+
+testObj(obj);
+
+function testObj(obj) {
+	obj['name'] = "Prem Kumar";
+//	print_r(obj);
+}
+print_r(obj);
 </script>
