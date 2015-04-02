@@ -15,5 +15,9 @@ $a = array("a"=>"red","b"=>"green","c"=>"red");
 $result = array_unique($a);
 
 $result = trim(" PREM KUMAR   ");
+
+$result = urlencode("http://www.google.com?q=this is the good example");
+$result = urldecode($result);
+
 print_r($result);
 ?>
