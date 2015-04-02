@@ -1,0 +1,11 @@
+<script src="php_javascript.js"></script>
+<script>
+for (var i=0; i<4; i++)
+{
+    (function(num){
+        setTimeout(function(){
+            print_r(num);
+        }, 1000);
+    })(i);
+}
+</script>
