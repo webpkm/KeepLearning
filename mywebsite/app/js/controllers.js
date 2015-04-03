@@ -1,6 +1,6 @@
 var appControllers = angular.module('appControllers', []);
 
-appControllers.controller('AppCtrl', function($scope, $http){
+appControllers.controller('AppCtrl', function($scope, $http) {
 	// To get the ajax data
 	/*
 	$http.get('json/default.json').success(function(data) {
@@ -10,7 +10,7 @@ appControllers.controller('AppCtrl', function($scope, $http){
 	$scope.pageName = "HomePage";
 });
 
-appControllers.controller('LoginCtrl', function($scope, $http){
+appControllers.controller('LoginCtrl', function($scope, $http) {
 	// To get the ajax data
 	/*
 	$http.get('json/default.json').success(function(data) {
@@ -20,7 +20,7 @@ appControllers.controller('LoginCtrl', function($scope, $http){
 	$scope.pageName = "LoginPage";
 });
 
-appControllers.controller('SignupCtrl', function($scope, $http){
+appControllers.controller('SignupCtrl', function($scope, $http) {
 	// To get the ajax data
 	/*
 	$http.get('json/default.json').success(function(data) {
@@ -30,7 +30,7 @@ appControllers.controller('SignupCtrl', function($scope, $http){
 	$scope.pageName = "Signup Page";
 });
 
-appControllers.controller('RestPasswordCtrl', function($scope, $http){
+appControllers.controller('RestPasswordCtrl', function($scope, $http) {
 	// To get the ajax data
 	/*
 	$http.get('json/default.json').success(function(data) {
@@ -40,7 +40,7 @@ appControllers.controller('RestPasswordCtrl', function($scope, $http){
 	$scope.pageName = "ResetPasswordPage";
 });
 
-appControllers.controller('LogoutCtrl', function($scope, $http){
+appControllers.controller('LogoutCtrl', function($scope, $http) {
 	// To get the ajax data
 	/*
 	$http.get('json/default.json').success(function(data) {
@@ -50,7 +50,7 @@ appControllers.controller('LogoutCtrl', function($scope, $http){
 	$scope.pageName = "logoutPage";
 });
 
-appControllers.controller('TricksCtrl', function($scope, $http){
+appControllers.controller('TricksCtrl', function($scope, $http) {
 	// To get the ajax data
 	/*
 	$http.get('json/default.json').success(function(data) {
@@ -58,4 +58,10 @@ appControllers.controller('TricksCtrl', function($scope, $http){
 	});
 	*/
 	$scope.pageName = "trickstPage";
+});
+
+appControllers.controller('HeaderController', function($scope, $location) {
+	$scope.isActive = function(path) {
+		return path === $location.path();
+	};
 });
