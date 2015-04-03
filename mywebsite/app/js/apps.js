@@ -35,15 +35,15 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$h
 phonecatApp.config(['$routeProvider',
 function($routeProvider) {
   $routeProvider.
-    when('/phones', {
-      templateUrl: 'partials/phone-list.html',
-      controller: 'PhoneListCtrl'
+    when('/', {
+      templateUrl: 'layout/desktop/index.html',
+      controller: 'HomePageCtrl'
     }).
-    when('/phones/:phoneId', {
-      templateUrl: 'partials/phone-detail.html',
-      controller: 'PhoneDetailCtrl'
+    when('/pages/:pageId', {
+      templateUrl: 'layout/desktop/page.html',
+      controller: 'pageCtrl'
     }).
     otherwise({
-      redirectTo: '/phones'
+      redirectTo: '/'
     });
 }]);

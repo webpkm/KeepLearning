@@ -1,0 +1,26 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<div id="panel" style="display:none">
+    <button>Close</button>
+</div>
+<script>
+$('#panel').fadeIn(function(){
+    // this points to #panel
+    var _this = $(this);
+    $('#panel button').click(function(){
+        // this points to the button
+        _this.fadeOut();
+    });
+});
+/*
+$('#panel').fadeIn(function(){
+    // Using $.proxy to bind this:
+
+    $('#panel button').click($.proxy(function(){
+        // this points to #panel
+        $(this).fadeOut();
+    },this));
+});
+*/
+</script>
+<div id="d1" data-role="page" data-last-value="43" data-hidden="true" data-options='{"name":"John"}'>
+</div>
