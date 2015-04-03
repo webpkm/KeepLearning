@@ -1,4 +1,4 @@
-var myApp = angular.module("phonecatApp",  [
+var myApp = angular.module("myApp",  [
    'ngRoute',
    'phonecatAnimations',
    'appControllers',
@@ -10,7 +10,7 @@ function($routeProvider) {
   $routeProvider.
     when('/', {
       templateUrl: 'layout/desktop/homepage.html',
-      controller: 'HomePageCtrl'
+      controller: 'AppCtrl'
     }).
     when('/login', {
     	templateUrl: 'layout/desktop/login.html',

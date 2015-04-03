@@ -1,7 +1,6 @@
 var appControllers = angular.module('appControllers', []);
 
-
-appControllers.controller('HomePageCtrl', function($scope, $http){
+appControllers.controller('AppCtrl', function($scope, $http){
 	// To get the ajax data
 	/*
 	$http.get('json/default.json').success(function(data) {
