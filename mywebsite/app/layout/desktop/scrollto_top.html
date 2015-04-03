@@ -1,0 +1,15 @@
+<div class="move-to-top" style="display:none"><a href="javascript:;" id="spnTop"><span class="glyphicon glyphicon-upload"></span></a></div>
+<script>
+$(document).ready(function() {
+	$('#spnTop').on("click",function() {
+	    $('html, body').animate({ scrollTop: 0 }, 'slow', function () {});
+	});	
+	$(window).scroll(function() {
+	    if ($(this).scrollTop() > 200) {
+	        $('.move-to-top').fadeIn();
+	    } else {
+	        $('.move-to-top').fadeOut();
+	    }
+	});
+});
+</script>
