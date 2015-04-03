@@ -25,8 +25,12 @@ function($routeProvider) {
     	controller: 'RestPasswordCtrl'
     }).
     when('/logout', {
-      templateUrl: 'layout/desktop/logout.html',
-      controller: 'LogoutCtrl'
+    	templateUrl: 'layout/desktop/logout.html',
+    	controller: 'LogoutCtrl'
+    }).
+    when('/tricks', {
+      templateUrl: 'layout/desktop/tricks.html',
+      controller: 'TricksCtrl'
     }).
     otherwise({
       redirectTo: '/'

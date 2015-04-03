@@ -46,6 +46,16 @@ appControllers.controller('LogoutCtrl', function($scope, $http){
 	$http.get('json/default.json').success(function(data) {
 	    $scope.data = data;
 	});
-	*/
+	 */
 	$scope.pageName = "logoutPage";
+});
+
+appControllers.controller('TricksCtrl', function($scope, $http){
+	// To get the ajax data
+	/*
+	$http.get('json/default.json').success(function(data) {
+	    $scope.data = data;
+	});
+	*/
+	$scope.pageName = "trickstPage";
 });
