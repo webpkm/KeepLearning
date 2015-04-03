@@ -9,7 +9,7 @@ myApp.config(['$routeProvider',
 function($routeProvider) {
   $routeProvider.
     when('/', {
-      templateUrl: 'layout/desktop/index.html',
+      templateUrl: 'layout/desktop/homepage.html',
       controller: 'HomePageCtrl'
     }).
     when('/login', {
