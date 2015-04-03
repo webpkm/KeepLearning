@@ -1,0 +1,35 @@
+body {
+	font-family: 'Arimo', sans-serif;
+	font-size:16px;
+  	background-color: #233537;
+}
+#main {
+	border-radius: 5px;
+	border: 1px solid #CCC;
+	margin: 60px auto 20px;
+	padding: 20px;
+	box-shadow: 0 0 5px 5px #BBB;
+  	background-color: #FFF;
+}
+#article {
+	font-size:18px;
+}
+
+pre code {
+	font-size:16px;
+}
+
+.navbar-default {
+	background-color:#bf3e11;
+}
+.navbar-default .navbar-brand { color: #FFF;}
+.navbar-default .navbar-nav>li>a { color: #FFF;}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+  color: #ffffff;
+  background-color: #97310e;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  color: #ffffff;
+  background-color: #ae3910;
+}

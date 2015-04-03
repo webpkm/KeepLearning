@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+  <meta name="Description"
+        content="AngularJS is what HTML would have been, had it been designed for building web-apps.
+                 Declarative templates with data-binding, MVW, MVVM, MVC, dependency injection and great
+                 testability story all implemented with pure client-side JavaScript!">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AngularJS — Superheroic JavaScript MVW Framework</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  
+  <!-- <base href="/"> -->
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-animate.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.1.5/angular-local-storage.min.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/apps.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body>
+	<div ng-include="'layout/desktop/header-menubar.html'"></div>
+	<div class="container">
+		<div class="view-container">
+		  <div ng-view class="view-frame" id="main"></div>
+		</div>
+	</div>
+</body>
+</html>

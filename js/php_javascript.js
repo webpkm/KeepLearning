@@ -46,6 +46,13 @@
 		return decodeURIComponent(url);
 	}
 	
+	function htmlspecialchars(text) {  
+	    var replacements= {"<": "&lt;", ">": "&gt;","&": "&amp;", '"': "&quot;"};                      
+	    return text.replace(/[<>&"]/g, function(character) {  
+	        return replacements[character];  
+	    }); 
+	}
+	
 	function print_r(string) {
 		document.write(string);
 		console.log(string);
