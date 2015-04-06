@@ -40,13 +40,17 @@ appControllers.controller('RestPasswordCtrl', function($scope, $http) {
 	$scope.pageName = "ResetPasswordPage";
 });
 
-appControllers.controller('LogoutCtrl', function($scope, $http) {
+appControllers.controller('LogoutCtrl', function($scope, db) {
 	// To get the ajax data
 	/*
 	$http.get('json/default.json').success(function(data) {
 	    $scope.data = data;
 	});
 	 */
+	$scope.save = function() {
+	    db.addItem('hello');
+	    console.log( db.getItems() );
+	};
 	$scope.pageName = "logoutPage";
 });
 
